@@ -58,6 +58,15 @@ To ensure all plugins (LSP, Tree-sitter, and Telescope) function correctly, plea
 * **Node.js & npm** (Required for various LSP servers like `html` and `eslint`)
 * **Go** (Required for certain internal tools)
 
+For the best results, we recommend you install and use the Ghostty terminal with the following configuration:
+
+```Ini, TOML
+theme = Adwaita Dark
+font-size = 18
+background-opacity = 0.85
+background-blur-radius = 20
+```
+
 ### Installation
 
 #### 1. Prepare Configuration Directory
