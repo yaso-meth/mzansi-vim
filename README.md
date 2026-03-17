@@ -105,4 +105,4 @@ We strive to respond to issues and pull requests in a timely manner. While this 
 
 If you would like to support the MIH development team directly, please feel free to contribute to the [MIH Project via DonaHub](https://donahub.co.za/campaigns/mih-project)
 
-Thank you for using the MIH Package Toolkit!
+Thank you for using the Mzansi Vim!
