@@ -11,11 +11,11 @@ A pre-configured, performance-oriented Neovim setup designed to get you from zer
 * **Syntax Highlighting:** Robust parsing for over 15 languages via `nvim-treesitter`.
 * **Git Integration:** Quick access to Git commands using `vim-fugitive`.
 
-## ⌨️ Essential Keybindings
+## Essential Keybindings
 
 The **Leader Key** is set to `Space`.
 
-### 📂 Navigation & Searching
+### Navigation & Searching
 | Action | Keybinding | Description |
 | :--- | :--- | :--- |
 | **File Explorer** | `<leader>cd` | Open the built-in Netrw explorer. |
@@ -23,7 +23,7 @@ The **Leader Key** is set to `Space`.
 | **Live Grep** | `<leader>fg` | Search for specific text across all files. |
 | **Help Tags** | `<leader>fh` | Search through Neovim help documentation. |
 
-### 🎣 Harpoon (Quick-Switching)
+### Harpoon (Quick-Switching)
 | Action | Keybinding | Description |
 | :--- | :--- | :--- |
 | **Add File** | `<leader>a` | Mark the current file in Harpoon. |
@@ -31,7 +31,7 @@ The **Leader Key** is set to `Space`.
 | **Harpoon Find** | `<leader>fl` | Use Telescope to search your Harpoon list. |
 | **Quick Nav** | `Ctrl + h/t/n/s` | Jump instantly to Harpoon files 1, 2, 3, or 4. |
 
-### 🛠️ LSP & Development
+### LSP & Development
 | Action | Keybinding | Description |
 | :--- | :--- | :--- |
 | **Hover Docs** | `K` | Display documentation for the symbol under cursor. |
@@ -46,9 +46,9 @@ The **Leader Key** is set to `Space`.
 | **Confirm Completion**| `Enter` | Accept the current suggestion in the popup menu. |
 | **Scroll Docs** | `Ctrl + f / b` | Scroll up/down in the LSP documentation window. |
 
-## 🚀 Get Started
+## Get Started
 
-### 📋 Prerequisites
+### Prerequisites
 To ensure all plugins (LSP, Tree-sitter, and Telescope) function correctly, please install the following:
 
 * **Neovim** (v0.10+ recommended)
@@ -58,7 +58,7 @@ To ensure all plugins (LSP, Tree-sitter, and Telescope) function correctly, plea
 * **Node.js & npm** (Required for various LSP servers like `html` and `eslint`)
 * **Go** (Required for certain internal tools)
 
-### 📥 Installation
+### Installation
 
 #### 1. Prepare Configuration Directory
 Depending on whether you have an existing setup, follow the appropriate step below:
