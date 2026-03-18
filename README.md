@@ -65,8 +65,8 @@ The **Leader Key** is set to `Space`.
 | **Show Error** | `<leader>e` | Open a floating window with the full error under cursor. |
 | **Next Error** | `]d` | Jump to the next diagnostic in the file. |
 | **Previous Error** | `[d` | Jump to the previous diagnostic in the file. |
-| **Quickfix List** | `<leader>q` | Load all diagnostics into the quickfix list. |
-| **Close Quickfix** | `:q <Enter>` | Close the quickfix window. |
+| **Error List** | `<leader>el` | Load all diagnostics into the quickfix list. |
+| **Close Quickfix** | `:q <Enter>` | Close the quickfix window while active. |
  
 ### Window Management
 | Action | Keybinding | Description |

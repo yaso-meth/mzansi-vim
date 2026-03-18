@@ -75,7 +75,7 @@ return {
 					vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, opts) -- show error under cursor
 					vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)        -- jump to previous error
 					vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)        -- jump to next error
-					vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, opts) -- all errors in quickfix list
+					vim.keymap.set("n", "<leader>el", vim.diagnostic.setloclist, opts) -- all errors in quickfix list
 					vim.keymap.set("n", "<leader>af", vim.lsp.buf.format, { desc = "Format file" }) -- manual format
 
 					-- Format on save
