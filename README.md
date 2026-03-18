@@ -18,19 +18,7 @@ A pre-configured, performance-oriented Neovim setup designed to get you from zer
 
 The **Leader Key** is set to `Space`.
 
-**Note:** Dashboard keybindings are active only on the startup screen and do not require the leader key prefix.
-
-### Dashboard
-| Action | Keybinding | Description |
-| :--- | :--- | :--- |
-| **File Explorer** | `cd` | Open Netrw directly from the dashboard. |
-| **Find Files** | `ff` | Fuzzy find files via Telescope. |
-| **Live Grep** | `fg` | Search across all files via Telescope. |
-| **Harpoon Menu** | `e` | Open the Harpoon quick menu. |
-| **Harpoon Search** | `fl` | Search Harpoon marks via Telescope. |
-| **Lazy Manager** | `z` | Open the Lazy plugin manager. |
-| **Help Tags** | `fh` | Search Neovim help tags via Telescope. |
-| **Quit** | `q` | Quit Neovim. |
+**Note:** Dashboard keybindings are active only on the dashboard screen and do not require the leader key prefix.
 
 ### Dashboard
 | Action | Keybinding | Description |
