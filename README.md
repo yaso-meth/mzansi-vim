@@ -66,9 +66,33 @@ The **Leader Key** is set to `Space`.
 | :--- | :--- | :--- |
 | **Hover Docs** | `K` | Display documentation for the symbol under cursor. |
 | **Go to Definition**| `gd` | Jump to the source code of a function/variable. |
+| **Code Actions** | `<leader>ca` | Show available fixes or refactors. |
+| **Align File** | `<leader>rn` | Auto align file. |
 | **References** | `gr` | List all places where a symbol is used. |
 | **Rename** | `<leader>rn` | Rename all occurrences of the symbol. |
-| **Code Actions** | `<leader>ca` | Show available fixes or refactors. |
+
+### Diagnostics (Errors & Warnings)
+| Action | Keybinding | Description |
+| :--- | :--- | :--- |
+| **Show Error** | `<leader>e` | Open a floating window with the full error under cursor. |
+| **Next Error** | `]d` | Jump to the next diagnostic in the file. |
+| **Previous Error** | `[d` | Jump to the previous diagnostic in the file. |
+| **Quickfix List** | `<leader>q` | Load all diagnostics into the quickfix list. |
+| **Close Quickfix** | `:q <Enter>` | Close the quickfix window. |
+ 
+### Window Management
+| Action | Keybinding | Description |
+| :--- | :--- | :--- |
+| **Cycle Windows** | `Ctrl + w + w` | Cycle focus between open windows (e.g. quickfix ↔ code). |
+| **Move Down** | `Ctrl + w + j` | Move focus to the window below. |
+| **Move Up** | `Ctrl + w + k` | Move focus to the window above. |
+| **Jump & Stay** | `Ctrl + w + Enter` | Open quickfix entry in a split, keeping quickfix focused. |
+ 
+### Commenting
+| Action | Keybinding | Description |
+| :--- | :--- | :--- |
+| **Toggle Comment** | `Ctrl + /` | Comment or uncomment the current line (normal mode). |
+| **Toggle Comment** | `Ctrl + /` | Comment or uncomment the selection (visual mode). |
 
 ### Editor Essentials
 | Action | Keybinding | Description |
