@@ -97,7 +97,7 @@ To ensure all plugins (LSP, Tree-sitter, and Telescope) function correctly, plea
 * **Git** (For cloning the repo and managing plugins)
 * **Tree-sitter & Tree-sitter-cli** (For syntax highlighting)
 * **Ripgrep** (Required for Telescope live grep)
-* **Node.js & npm** (Required for various LSP servers like `html` and `eslint`)
+* **Node** (Required for various LSP servers like `html` and `eslint`)
 * **Go** (Required for certain internal tools)
 
 For the best results, we recommend you install and use the Ghostty terminal with the following configuration:
@@ -117,11 +117,11 @@ Depending on whether you have an existing setup, follow the appropriate step bel
 **For a Fresh Install:**
 If you have never configured Neovim, create the configuration folder:
 ```bash
-mkdir -p ~/.config/nvim
+mkdir ~/.config/nvim
 ```
 
 **For an Existing Setup:**
-If you have never configured Neovim, create the configuration folder:
+If you have configured Neovim already, create a backup folder:
 ```bash
 mv ~/.config/nvim ~/.config/nvim.bak
 ```
