@@ -1,5 +1,7 @@
 # Mzansi Vim: The No-Fuss Neovim Kickstart 🇿🇦
 
+<img src='assets/demo.png' height='300' alt='MzansiVim Dashboard'>
+
 A pre-configured, performance-oriented Neovim setup designed to get you from zero to coding in minutes. Built for local developers who want a powerful IDE experience without the manual overhead of a 500-line `init.lua`.
 
 ## Key Features
