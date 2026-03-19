@@ -95,9 +95,9 @@ To ensure all plugins (LSP, Tree-sitter, and Telescope) function correctly, plea
 
 * **Neovim** (v0.10+ recommended)
 * **Git** (For cloning the repo and managing plugins)
-* **Tree-sitter & Tree-sitter-cli** (For syntax highlighting)
+* **Tree-sitter-cli** (For syntax highlighting)
 * **Ripgrep** (Required for Telescope live grep)
-* **Node** (Required for various LSP servers like `html` and `eslint`)
+* **Node & NPM** (Required for various LSP servers like `html` and `eslint`)
 * **Go** (Required for certain internal tools)
 
 For the best results, we recommend you install and use the Ghostty terminal with the following configuration:
@@ -131,7 +131,7 @@ Clone the Mzansi Vim configuration into your config folder:
 
 ```bash
 cd ~/.config/nvim
-git clone https://git.mzansi-innovation-hub.co.za/yaso_meth/mzansi_vim.git
+git clone https://git.mzansi-innovation-hub.co.za/yaso_meth/mzansi_vim.git .
 ```
 
 #### 3. Initialize
