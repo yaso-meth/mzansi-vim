@@ -36,6 +36,7 @@ The **Leader Key** is set to `Space`.
 ### Navigation & Searching
 | Action | Keybinding | Description |
 | :--- | :--- | :--- |
+| **Dashboard** | `<leader>;` | Open the MzansiVim Dasboard. |
 | **File Explorer** | `<leader>cd` | Open the built-in Netrw explorer. |
 | **Find Files** | `<leader>ff` | Fuzzy find files in your project. |
 | **Live Grep** | `<leader>fg` | Search for specific text across all files. |
