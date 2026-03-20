@@ -125,6 +125,7 @@ mkdir ~/.config/nvim
 If you have configured Neovim already, create a backup folder:
 ```bash
 mv ~/.config/nvim ~/.config/nvim.bak
+mkdir ~/.config/nvim
 ```
 
 #### 2. Clone the Repository
