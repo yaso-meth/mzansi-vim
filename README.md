@@ -56,7 +56,7 @@ The **Leader Key** is set to `Space`.
 | **Hover Docs** | `K` | Display documentation for the symbol under cursor. |
 | **Go to Definition**| `gd` | Jump to the source code of a function/variable. |
 | **Code Actions** | `<leader>ca` | Show available fixes or refactors. |
-| **Align File** | `<leader>rn` | Auto align file. |
+| **Align File** | `<leader>af` | Auto align file. |
 | **References** | `gr` | List all places where a symbol is used. |
 | **Rename** | `<leader>rn` | Rename all occurrences of the symbol. |
 
