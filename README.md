@@ -53,9 +53,9 @@ The **Leader Key** is set to `Space`.
 ### LSP & Development
 | Action | Keybinding | Description |
 | :--- | :--- | :--- |
-| **Hover Docs** | `K` | Display documentation for the symbol under cursor. |
+| **Hover Docs** | `Ctrl + k` | Display documentation for the symbol under cursor. |
 | **Go to Definition**| `gd` | Jump to the source code of a function/variable. |
-| **Code Actions** | `<leader>ca` | Show available fixes or refactors. |
+| **Code Actions** | `<leader>ca` or `Ctrl + .` | Show available code actions, fixes or refactors. |
 | **Align File** | `<leader>af` | Auto align file. |
 | **References** | `gr` | List all places where a symbol is used. |
 | **Rename** | `<leader>rn` | Rename all occurrences of the symbol. |
@@ -66,15 +66,18 @@ The **Leader Key** is set to `Space`.
 | **Show Error** | `<leader>e` | Open a floating window with the full error under cursor. |
 | **Next Error** | `]d` | Jump to the next diagnostic in the file. |
 | **Previous Error** | `[d` | Jump to the previous diagnostic in the file. |
-| **Error List** | `<leader>el` | Load all diagnostics into the quickfix list. |
-| **Close Quickfix** | `:q <Enter>` | Close the quickfix window while active. |
+| **Error List** | `<leader>el` | Load all diagnostics into the error list. |
+| **Close Error List** | `:q <Enter>` | Close the error list window while active. |
  
 ### Window Management
 | Action | Keybinding | Description |
 | :--- | :--- | :--- |
-| **Cycle Windows** | `Ctrl + w + w` | Cycle focus between open windows (e.g. quickfix ↔ code). |
-| **Move Down** | `Ctrl + w + j` | Move focus to the window below. |
-| **Move Up** | `Ctrl + w + k` | Move focus to the window above. |
+| **Cycle Windows** | `Ctrl + w w` | Cycle focus between open windows (). |
+| **Move Down** | `Ctrl + w j` | Move focus to the window below. |
+| **Move Up** | `Ctrl + w k` | Move focus to the window above. |
+| **Move Up** | `Ctrl + w s` | Duplicate window (horizontal). |
+| **Move Up** | `Ctrl + w v` | Duplicate window (Verticle). |
+| **Move Up** | `Ctrl + w q` | Close active window. |
 | **Jump & Stay** | `Ctrl + w + Enter` | Open quickfix entry in a split, keeping quickfix focused. |
  
 ### Commenting
