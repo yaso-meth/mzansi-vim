@@ -1,0 +1,6 @@
+WRN 2026-04-17T11:59:07.367 ?.87100    server_start:199: Failed to start server: operation not permitted: /var/folders/2m/swywvgx56d3605sg4w8sngww0000gn/T/nvim.yaso_meth/KxW1Fr/nvim.87100.0
+WRN 2026-04-17T11:59:11.612 ?.87111    server_start:199: Failed to start server: operation not permitted: /var/folders/2m/swywvgx56d3605sg4w8sngww0000gn/T/nvim.yaso_meth/JWMbgP/nvim.87111.0
+WRN 2026-04-17T11:59:19.290 ?.87136    server_start:199: Failed to start server: operation not permitted: /var/folders/2m/swywvgx56d3605sg4w8sngww0000gn/T/nvim.yaso_meth/OzOmzX/nvim.87136.0
+WRN 2026-04-17T12:02:53.603 ?.88346    server_start:199: Failed to start server: operation not permitted: /var/folders/2m/swywvgx56d3605sg4w8sngww0000gn/T/nvim.yaso_meth/svFBSD/nvim.88346.0
+WRN 2026-04-17T12:12:45.385 ?.90272    server_start:199: Failed to start server: operation not permitted: /var/folders/2m/swywvgx56d3605sg4w8sngww0000gn/T/nvim.yaso_meth/Jd4YdQ/nvim.90272.0
+WRN 2026-04-17T12:31:44.853 ?.5405     server_start:199: Failed to start server: operation not permitted: /var/folders/2m/swywvgx56d3605sg4w8sngww0000gn/T/nvim.yaso_meth/FFDhfK/nvim.5405.0
