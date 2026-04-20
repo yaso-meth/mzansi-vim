@@ -60,6 +60,19 @@ The **Leader Key** is set to `Space`.
 | **References** | `gr` | List all places where a symbol is used. |
 | **Rename** | `<leader>rn` | Rename all occurrences of the symbol. |
 
+### LSP & Development
+| Action | Keybinding | Description |
+| :--- | :--- | :--- |
+| **Run App** | `:FRun` | Start the flutter application. |
+| **Run Target**| `:FRunT <path to file>` | Run Flutter with a specific target file (e.g., main_dev.dart). |
+| **Hot Reload** | `:FReload` | Trigger a Hot Reload for the running app. |
+| **Hot Restart** | `:FRestart` | Trigger a Hot Restart for the running app. |
+| **Quit App** | `:FQuit` | Stop the running Flutter session. |
+| **List Emulators** | `:FEmulators` | Show and launch available emulators. |
+| **List Devices** | `:FDevices` | Show a list of available physical/virtual devices. |
+| **Toggle Logs** | `:FLogs` | Open or close the Flutter Dev Log split. |
+| **Clear Logs** | `:FLogsClear` | Clear the current Flutter Dev Log buffer. |
+
 ### Diagnostics (Errors & Warnings)
 | Action | Keybinding | Description |
 | :--- | :--- | :--- |
