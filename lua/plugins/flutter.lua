@@ -8,17 +8,18 @@ return {
 		},
 		config = function()
 			vim.opt.termguicolors = true
-			vim.env.FLUTTER_FORCE_COLOR = "1"
+			-- vim.env.FLUTTER_FORCE_COLOR = "1"
 
+			-- Auto scroll & Color logs when new logs appear
 			vim.api.nvim_create_autocmd({ "TextChanged", "BufWinEnter" }, {
-				pattern = "*__FLUTTER_DEV_LOG__*", -- Default name for flutter-tools logs
+				pattern = "*__FLUTTER_DEV_LOG__*",
 				callback = function()
 					local buf = vim.api.nvim_get_current_buf()
-					-- Check if we are in the log buffer
+
+					-- Auto-scroll logic
 					if vim.bo[buf].filetype == "log" or vim.fn.bufname(buf):match("flutter%-dev%.log") then
 						local win = vim.api.nvim_get_current_win()
 						local last_line = vim.api.nvim_buf_line_count(buf)
-						-- Only scroll if we aren't currently in Insert mode
 						if vim.api.nvim_get_mode().mode ~= 'i' then
 							vim.api.nvim_win_set_cursor(win, { last_line, 0 })
 						end
@@ -62,7 +63,7 @@ return {
 			-- Simple Aliases
 			-- user_command("FRun", "FlutterRun", {})
 			-- user_command("FRun", "FlutterRun --color", {})
-			user_command("FRun", "FlutterRun --color", {})
+			user_command("FRun", "FlutterRun", {})
 
 			user_command("FReload", "FlutterReload", {})
 			user_command("FRestart", "FlutterRestart", {})
@@ -74,7 +75,7 @@ return {
 
 			-- Target-specific Run Command
 			user_command("FRunT", function(opts)
-				vim.cmd("FlutterRun --color --target=" .. opts.args)
+				vim.cmd("FlutterRun --target=" .. opts.args)
 			end, {
 				nargs = 1,
 				complete = "file",
