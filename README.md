@@ -60,7 +60,7 @@ The **Leader Key** is set to `Space`.
 | **References** | `gr` | List all places where a symbol is used. |
 | **Rename** | `<leader>rn` | Rename all occurrences of the symbol. |
 
-### LSP & Development
+### Flutter Development
 | Action | Keybinding | Description |
 | :--- | :--- | :--- |
 | **Run App** | `:FRun` | Start the flutter application. |
