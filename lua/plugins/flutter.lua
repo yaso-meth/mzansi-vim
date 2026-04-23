@@ -63,7 +63,7 @@ return {
 			-- Simple Aliases
 			-- user_command("FRun", "FlutterRun", {})
 			-- user_command("FRun", "FlutterRun --color", {})
-			user_command("FRun", "FlutterRun", {})
+			user_command("FRun", "FlutterRun --web-port 1995", {})
 
 			user_command("FReload", "FlutterReload", {})
 			user_command("FRestart", "FlutterRestart", {})
@@ -75,7 +75,7 @@ return {
 
 			-- Target-specific Run Command
 			user_command("FRunT", function(opts)
-				vim.cmd("FlutterRun --target=" .. opts.args)
+				vim.cmd("FlutterRun --web-port 1995 --target=" .. opts.args)
 			end, {
 				nargs = 1,
 				complete = "file",
