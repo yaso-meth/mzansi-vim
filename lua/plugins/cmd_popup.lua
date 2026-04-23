@@ -15,6 +15,11 @@ return {
 	},
 	dependencies = {
 		"MunifTanjim/nui.nvim",
-		"rcarriga/nvim-notify",
+		{
+			"rcarriga/nvim-notify",
+			opts = {
+				timeout = 2000, -- Set this to your preferred time in milliseconds (e.g., 3000 = 3 seconds)
+			},
+		},
 	}
 }
