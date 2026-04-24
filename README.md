@@ -73,6 +73,15 @@ The **Leader Key** is set to `Space`.
 | **Toggle Logs** | `:FLogs` | Open or close the Flutter Dev Log split. |
 | **Clear Logs** | `:FLogsClear` | Clear the current Flutter Dev Log buffer. |
 
+### Copilot Code Completion
+| Action | Keybinding | Description |
+| :--- | :--- | :--- |
+| **:Setup Copilot** | `:Copilot setup` | Authenticate and enable GitHub Copilot (disable cmd popups before proceeding with setup). |
+| **:Enable Copilot** | `:Copilot enable` | Enable GitHub Copilot after :Copilot disable. |
+| **:Disable Copilot** | `:Copilot disable` | Disable GitHub Copilot inline suggestions. |
+| **:Check Status of Copilot** | `:Copilot status` | Check if GitHub Copilot is operational and report on any issues. |
+| **:Signout of Copilot** | `:Copilot signout` | Sign out of GitHub Copilot. |
+
 ### Diagnostics (Errors & Warnings)
 | Action | Keybinding | Description |
 | :--- | :--- | :--- |
