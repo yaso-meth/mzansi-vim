@@ -76,6 +76,7 @@ The **Leader Key** is set to `Space`.
 ### Copilot Code Completion
 | Action | Keybinding | Description |
 | :--- | :--- | :--- |
+| **:Accept suggestion** | `Ctrl + l` | Accept suggested code from Copilot. |
 | **:Setup Copilot** | `:Copilot setup` | Authenticate and enable GitHub Copilot (disable cmd popups before proceeding with setup). |
 | **:Enable Copilot** | `:Copilot enable` | Enable GitHub Copilot after :Copilot disable. |
 | **:Disable Copilot** | `:Copilot disable` | Disable GitHub Copilot inline suggestions. |
@@ -94,7 +95,7 @@ The **Leader Key** is set to `Space`.
 ### Window Management
 | Action | Keybinding | Description |
 | :--- | :--- | :--- |
-| **Cycle Windows** | `Ctrl + w w` | Cycle focus between open windows (). |
+| **Cycle Windows** | `Ctrl + w w` | Cycle focus between open windows. |
 | **Move Down** | `Ctrl + w j` | Move focus to the window below. |
 | **Move Up** | `Ctrl + w k` | Move focus to the window above. |
 | **Move Up** | `Ctrl + w s` | Duplicate window (horizontal). |
