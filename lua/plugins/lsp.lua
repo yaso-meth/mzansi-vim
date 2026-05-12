@@ -45,7 +45,9 @@ return {
 					})
 				end
 				-- Activate the server
-				vim.lsp.enable(server_name)
+				if server_name ~= "dartls" then
+					vim.lsp.enable(server_name)
+				end
 			end
 
 			-- Diagnostic display config
