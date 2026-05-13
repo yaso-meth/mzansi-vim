@@ -23,7 +23,7 @@ The **Leader Key** is set to `Space`.
 ### Dashboard
 | Action | Keybinding | Description |
 | :--- | :--- | :--- |
-| **File Explorer** | `cd` | Open Netrw directly from the dashboard. |
+| **File Explorer** | `cd` | Open Yazi directly from the dashboard. |
 | **Find Files** | `ff` | Fuzzy find files via Telescope. |
 | **Live Grep** | `fg` | Search across all files via Telescope. |
 | **Harpoon Menu** | `e` | Open the Harpoon quick menu. |
@@ -37,10 +37,31 @@ The **Leader Key** is set to `Space`.
 | Action | Keybinding | Description |
 | :--- | :--- | :--- |
 | **Dashboard** | `<leader>;` | Open the MzansiVim Dasboard. |
-| **File Explorer** | `<leader>cd` | Open the built-in Netrw explorer. |
+| **File Explorer (Current Directory)** | `<leader>cd` | Open the Yazi explorer in current directory. |
+| **File Explorer (Working Directory)** | `<leader>cw` | Open the Yazi explorer in working directory. |
 | **Find Files** | `<leader>ff` | Fuzzy find files in your project. |
 | **Live Grep** | `<leader>fg` | Search for specific text across all files. |
 | **Help Tags** | `<leader>fh` | Search through Neovim help documentation. |
+
+### Yazi (File Explorer)
+| Action | Keybinding | Description |
+| :--- | :--- | :--- |
+| **File Explorer** | `<leader>cd` | Open the Yazi explorer in file location. |
+| **File Explorer** | `<leader>cw` | Open the Yazi explorer in working directory location. |
+| **Navigation** | `h / j / k / l` | Move left (parent folder)/ down/ up/ or right (enter folder/open file). |
+| **Open file** | `Enter` | Open file in new buffer. |
+| **Open File (Horizontal Split)** | `Ctrl + x` | open file in horizontal split. |
+| **Open File (Vertical Split)** | `Ctrl + v` | open file in horizontal split. |
+| **Add file/ folder** | `a` | Create a new file (append / for a folder). |
+| **Rename file/ folder** | `r` | Rename the highlighted file or directory. |
+| **Delete file/ folder** | `d` | Move the selected item(s) to the system trash. |
+| **Permanent Delete file/ folder** | `D` | Delete item(s) permanently (skips trash). |
+| **Select file/ folder** | `space` | Toggle selection for the current file (allows batch actions). |
+| **Bulk Select file/ folder** | `v` | Enter visual mode to select multiple files with `j/k` |
+| **Copy / Cut** | `y / x` | Copy (Yank) or Cut the selected files. |
+| **Paste** | `p` | Paste copied or cut files into the current directory. |
+| **Help Menu** | `F1` | Open the help menu for keybindings. |
+| **Close / Quit** | `q` | Exit Yazi and return to the Neovim buffer. |
 
 ### Harpoon (Quick-Switching)
 | Action | Keybinding | Description |
@@ -124,6 +145,7 @@ To ensure all plugins (LSP, Tree-sitter, and Telescope) function correctly, plea
 * **Git** (For cloning the repo and managing plugins)
 * **Tree-sitter-cli** (For syntax highlighting)
 * **Ripgrep** (Required for Telescope live grep)
+* **Yazi** (Required for file expolorer)
 * **Node & NPM** (Required for various LSP servers like `html` and `eslint`)
 * **Go** (Required for certain internal tools)
 
