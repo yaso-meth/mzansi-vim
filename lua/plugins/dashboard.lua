@@ -19,7 +19,14 @@ return {
 				header = vim.split(logo, "\n"),
 				center = {
 					-- Aligned to Mzansi Vim Essential Keybindings
-					{ icon = "󰉓 ", desc = " File Explorer    ", key = "cd", action = "Explore" },
+					{
+						icon = "󰉓 ",
+						desc = " File Explorer    ",
+						key = "cd",
+						action = function()
+							require("yazi").yazi(nil, vim.fn.getcwd())
+						end
+					},
 					{ icon = " ", desc = " Find Files       ", key = "ff", action = "Telescope find_files" },
 					{ icon = " ", desc = " Live Grep        ", key = "fg", action = "Telescope live_grep" },
 					{
