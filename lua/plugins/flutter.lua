@@ -40,6 +40,9 @@ return {
 				},
 				lsp = {
 					capabilities = require("cmp_nvim_lsp").default_capabilities(),
+					on_attach = function(client, bufnr)
+						client.server_capabilities.semanticTokensProvider = nil
+					end,
 					settings = {
 						showTodos = true,
 						completeFunctionCalls = true,

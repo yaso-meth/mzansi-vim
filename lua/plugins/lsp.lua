@@ -107,7 +107,16 @@ return {
 				},
 				mapping = cmp.mapping.preset.insert({
 					["<C-Space>"] = cmp.mapping.complete(),
-					["<CR>"] = cmp.mapping.confirm({ select = true }),
+					["<CR>"] = cmp.mapping({
+						i = function(fallback)
+							if cmp.visible() and cmp.get_active_entry() then
+								cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = false })
+							else
+								fallback()
+							end
+							fallback()
+						end,
+					}),
 					["<Tab>"] = cmp.mapping(function(fallback)
 						if cmp.visible() then
 							cmp.confirm({ select = true })
@@ -117,10 +126,18 @@ return {
 					end, { "i", "s" }),
 				}),
 				sources = cmp.config.sources({
-					{ name = "nvim_lsp" },
-					{ name = "luasnip" },
-				}, {
-					{ name = "buffer" },
+					{ name = "nvim_lsp", keyword_length = 1 },
+					{ name = "luasnip",  keyword_length = 1 },
+					{
+						name = "buffer",
+						keyword_length = 2,
+						-- Limit indexing to only the active visible buffer to stop lag on Enter
+						option = {
+							get_bufnrs = function()
+								return { vim.api.nvim_get_current_buf() }
+							end
+						}
+					}, -- Triggers after typing 2 characters of a local word
 					{ name = "path" },
 				}),
 			})
