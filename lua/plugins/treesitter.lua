@@ -13,6 +13,13 @@ return {
 		ts.setup({
 			install_dir = vim.fn.stdpath("data") .. "/site",
 			auto_install = true,
+			highlight = {
+				enable = true,
+			},
+			indent = {
+				enable = true,
+				disable = { "dart" },
+			},
 		})
 		-- 2. Bulk Install Parsers (Asynchronous)
 		ts.install(supported_languages)

@@ -18,6 +18,26 @@ A pre-configured, performance-oriented Neovim setup designed to get you from zer
 
 The **Leader Key** is set to `Space`.
 
+### Core Motions & Editing
+
+| Action | Keybinding | Description |
+| :--- | :--- | :--- |
+| **Move Left** | `h` | Move the cursor one character to the left. |
+| **Move Down** | `j` | Move the cursor down one line. |
+| **Move Up** | `k` | Move the cursor up one line. |
+| **Move Right** | `l` | Move the cursor one character to the right. |
+| **Word Forward** | `w` | Jump forward to the start of the next word. |
+| **Word Backward** | `b` | Jump backward to the start of the previous word. |
+| **End of Word** | `e` | Jump forward to the end of the current/next word. |
+| **Line Start** | `0` | Jump to the absolute beginning of the current line. |
+| **Line End** | `$` | Jump to the end of the current line. |
+| **File Top** | `gg` | Jump to the first line of the file. |
+| **File Bottom** | `G` | Jump to the last line of the file. |
+| **Internal Yank** | `y` | Copy selected text (Visual mode) *inside* Neovim only. |
+| **Internal Paste** | `p` | Paste text (Normal mode) last copied/deleted *inside* Neovim. |
+| **System Copy** | `<leader>y` |Copy selected text (Visual mode) to the **system clipboard**. |
+| **System Paste** | `<leader>p` | Paste text (Normal mode) from the **system clipboard**. |
+
 **Note:** Dashboard keybindings are active only on the dashboard screen and do not require the leader key prefix.
 
 ### Dashboard
@@ -133,6 +153,8 @@ The **Leader Key** is set to `Space`.
 ### Editor Essentials
 | Action | Keybinding | Description |
 | :--- | :--- | :--- |
+| **Confirm Completion**| `Enter` | Accept the current suggestion in the popup menu. |
+| **Confirm Completion**| `Enter` | Accept the current suggestion in the popup menu. |
 | **Confirm Completion**| `Enter` | Accept the current suggestion in the popup menu. |
 | **Scroll Docs** | `Ctrl + f / b` | Scroll up/down in the LSP documentation window. |
 
