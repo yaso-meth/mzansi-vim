@@ -14,6 +14,8 @@ A pre-configured, performance-oriented Neovim setup designed to get you from zer
 * **Git Integration:** Quick access to Git commands using `vim-fugitive`.
 * **Custom Dashboard:** A branded startup screen via `dashboard-nvim` with quick-access shortcuts to your most common actions.
 
+cdcscdscsd
+
 ## Essential Keybindings
 
 The **Leader Key** is set to `Space`.
@@ -36,7 +38,8 @@ The **Leader Key** is set to `Space`.
 | **Internal Yank** | `y` | Copy selected text (Visual mode) *inside* Neovim only. |
 | **Internal Paste** | `p` | Paste text (Normal mode) last copied/deleted *inside* Neovim. |
 | **System Copy** | `<leader>y` |Copy selected text (Visual mode) to the **system clipboard**. |
-| **System Paste** | `<leader>p` | Paste text (Normal mode) from the **system clipboard**. |
+| **System Paste After** | `<leader>p` | Paste from **system clipboard** *after* cursor (Normal/Visual) |
+| **System Paste Before** | `<leader>p` | Paste from **system clipboard** *before* cursor (Normal/Visual) |
 
 **Note:** Dashboard keybindings are active only on the dashboard screen and do not require the leader key prefix.
 
