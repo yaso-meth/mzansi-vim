@@ -9,6 +9,19 @@ return {
 		config = function()
 			vim.opt.termguicolors = true
 			-- vim.env.FLUTTER_FORCE_COLOR = "1"
+			local project_root = vim.fn.getcwd()
+			local analysis_excluded_folders = {
+				project_root .. "/.dart_tool",
+				project_root .. "/build",
+				project_root .. "/ios/Pods",
+				project_root .. "/android/.gradle",
+			}
+			local flutter_bin = vim.fn.exepath("flutter")
+			if flutter_bin ~= "" then
+				local flutter_sdk = vim.fn.fnamemodify(vim.fn.resolve(flutter_bin), ":h:h")
+				table.insert(analysis_excluded_folders, flutter_sdk .. "/packages")
+				table.insert(analysis_excluded_folders, flutter_sdk .. "/.pub-cache")
+			end
 
 			-- Auto scroll & Color logs when new logs appear
 			vim.api.nvim_create_autocmd({ "TextChanged", "BufWinEnter" }, {
@@ -45,12 +58,16 @@ return {
 					end,
 					settings = {
 						showTodos = true,
-						completeFunctionCalls = true,
+						completeFunctionCalls = false,
 						updateImportsOnRename = true,
+						analysisExcludedFolders = analysis_excluded_folders,
 					},
 				},
 				widget_guides = {
-					enabled = true,
+					enabled = false,
+				},
+				closing_tags = {
+					enabled = false,
 				},
 				dev_log = {
 					enabled = true,

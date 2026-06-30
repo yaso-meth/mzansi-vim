@@ -17,7 +17,8 @@ return {
 		config = function()
 			local autopairs = require("nvim-autopairs")
 			autopairs.setup({
-				check_ts = true,
+				check_ts = false,
+				map_cr = false,
 				ts_config = {
 					lua = { "string" },
 					dart = { "string_literal" }

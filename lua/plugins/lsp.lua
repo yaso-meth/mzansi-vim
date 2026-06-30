@@ -114,7 +114,6 @@ return {
 							else
 								fallback()
 							end
-							fallback()
 						end,
 					}),
 					["<Tab>"] = cmp.mapping(function(fallback)
@@ -126,11 +125,11 @@ return {
 					end, { "i", "s" }),
 				}),
 				sources = cmp.config.sources({
-					{ name = "nvim_lsp", keyword_length = 1 },
-					{ name = "luasnip",  keyword_length = 1 },
+					{ name = "nvim_lsp", keyword_length = 2 },
+					{ name = "luasnip",  keyword_length = 2 },
 					{
 						name = "buffer",
-						keyword_length = 2,
+						keyword_length = 3,
 						-- Limit indexing to only the active visible buffer to stop lag on Enter
 						option = {
 							get_bufnrs = function()
