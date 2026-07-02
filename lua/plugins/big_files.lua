@@ -4,7 +4,7 @@ return {
 		event = { "BufReadPre", "BufNewFile" },
 		opts = {
 			-- Fallback size if the function doesn't intercept it
-			filesize = 2,
+			filesize = 1,
 			-- Use a detection function to unconditionally catch generated files
 			pattern = function(bufnr, _)
 				local buf_name = vim.api.nvim_buf_get_name(bufnr)

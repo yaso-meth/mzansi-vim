@@ -92,8 +92,12 @@ return {
 			user_command("FEmulators", "FlutterEmulators", {})
 			user_command("FLogs", "FlutterLogToggle", {})
 			user_command("FLogsClear", "FlutterLogClear", {})
+			user_command("FPubGet", "FlutterPubGet", {})
+			user_command("FDevToolsStart", "FlutterDevTools", {})
+			user_command("FDevToolsOpen", "FlutterOpenDevTools", {})
 			user_command("FBuild", "split | term dart run build_runner build", {})
 			user_command("FWatch", "split | term dart run build_runner watch", {})
+			user_command("FClean", "split | term flutter clean", {})
 			-- Target-specific Run Command
 			user_command("FRunT", function(opts)
 				vim.cmd("FlutterRun --web-port 1995 --target=" .. opts.args)

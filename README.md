@@ -4,6 +4,61 @@
 
 A pre-configured, performance-oriented Neovim setup designed to get you from zero to coding in minutes. Built for local developers who want a powerful IDE experience without the manual overhead of a 500-line `init.lua`.
 
+## Get Started
+
+### Prerequisites
+To ensure all plugins (LSP, Tree-sitter, and Telescope) function correctly, please install the following:
+
+* **Neovim** (v0.10+ recommended)
+* **Git** (For cloning the repo and managing plugins)
+* **Tree-sitter-cli** (For syntax highlighting)
+* **Ripgrep** (Required for Telescope live grep)
+* **Yazi** (Required for file expolorer)
+* **Node & NPM** (Required for various LSP servers like `html` and `eslint`)
+* **Go** (Required for certain internal tools)
+
+For the best results, we recommend you install and use the Ghostty terminal with the following configuration:
+
+```Ini, TOML
+theme = Adwaita Dark
+font-size = 18
+background-opacity = 0.85
+background-blur-radius = 20
+```
+
+### Installation
+
+#### 1. Prepare Configuration Directory
+Depending on whether you have an existing setup, follow the appropriate step below:
+
+**For a Fresh Install:**
+If you have never configured Neovim, create the configuration folder:
+```bash
+mkdir ~/.config/nvim
+```
+
+**For an Existing Setup:**
+If you have configured Neovim already, create a backup folder:
+```bash
+mv ~/.config/nvim ~/.config/nvim.bak
+mkdir ~/.config/nvim
+```
+
+#### 2. Clone the Repository
+Clone the Mzansi Vim configuration into your config folder:
+
+```bash
+cd ~/.config/nvim
+git clone https://git.mzansi-innovation-hub.co.za/yaso_meth/mzansi_vim.git .
+```
+
+#### 3. Initialize
+Simply launch Neovim:
+
+```bash
+nvim
+```
+
 ## Key Features
 
 * **LSP & Auto-completion:** Powered by `mason.nvim` and `nvim-cmp`, featuring out-of-the-box support for Python, Lua, Docker, SQL, and more.
@@ -116,6 +171,12 @@ The **Leader Key** is set to `Space`.
 | **List Devices** | `:FDevices` | Show a list of available physical/virtual devices. |
 | **Toggle Logs** | `:FLogs` | Open or close the Flutter Dev Log split. |
 | **Clear Logs** | `:FLogsClear` | Clear the current Flutter Dev Log buffer. |
+| **Clean Project** | `:FClean` | Execute flutter clean in split terminal. |
+| **Pub Get** | `:FPubGet` | Fetches project dependencies. |
+| **Start DevTools** | `:FDevToolsStart` | Start the local Flutter DevTools server |
+| **Open DevTools** | `:FDevToolsOpen` | Open Flutter DevTools in your default browser. |
+| **Build Runner** | `:FBuild` | Execute dart run build_runner build in split terminal. |
+| **Watch Runner** | `:FWatch` | Execute dart run build_runner watch in split terminal. |
 
 ### Copilot Code Completion
 | Action | Keybinding | Description |
@@ -161,60 +222,42 @@ The **Leader Key** is set to `Space`.
 | **Confirm Completion**| `Enter` | Accept the current suggestion in the popup menu. |
 | **Scroll Docs** | `Ctrl + f / b` | Scroll up/down in the LSP documentation window. |
 
-## Get Started
+### Lazygit Navigation & Commands
 
-### Prerequisites
-To ensure all plugins (LSP, Tree-sitter, and Telescope) function correctly, please install the following:
+| Action | Keybinding | Description |
+| :--- | :--- | :--- |
+| **Switch Panels** | `H` / `L` or `←` / `→` | Move between the left side panels (Status, Files, Branches, Commits, Stash). |
+| **Navigate List** | `J` / `K` or `↑` / `↓` | Move up and down within a panel's list. |
+| **Quit** | `q` | Close lazygit. |
+| **Help Menu** | `?` | Open the contextual keybindings help menu. |
 
-* **Neovim** (v0.10+ recommended)
-* **Git** (For cloning the repo and managing plugins)
-* **Tree-sitter-cli** (For syntax highlighting)
-* **Ripgrep** (Required for Telescope live grep)
-* **Yazi** (Required for file expolorer)
-* **Node & NPM** (Required for various LSP servers like `html` and `eslint`)
-* **Go** (Required for certain internal tools)
+### Lazygit Files Panel
 
-For the best results, we recommend you install and use the Ghostty terminal with the following configuration:
+| Action | Keybinding | Description |
+| :--- | :--- | :--- |
+| **Stage / Unstage File** | `Space` | Toggle staging for the highlighted file. |
+| **Stage All** | `a` | Stage or unstage all changes in the working directory. |
+| **Commit Changes** | `c` | Open the commit message prompt. |
+| **Discard Changes** | `d` | Open options to discard local changes to the file. |
+| **Ignore File** | `i` | Add the highlighted file to `.gitignore`. |
+| **Stash Changes** | `s` | Stash current changes. |
 
-```Ini, TOML
-theme = Adwaita Dark
-font-size = 18
-background-opacity = 0.85
-background-blur-radius = 20
-```
+### Lazygit Branches Panel
 
-### Installation
+| Action | Keybinding | Description |
+| :--- | :--- | :--- |
+| **Checkout Branch** | `Space` | Switch to the highlighted branch. |
+| **New Branch** | `n` | Create a new branch off the currently selected one. |
+| **Delete Branch** | `d` | Delete the highlighted branch. |
 
-#### 1. Prepare Configuration Directory
-Depending on whether you have an existing setup, follow the appropriate step below:
+### Lazygit Remotes, Push & Pull
 
-**For a Fresh Install:**
-If you have never configured Neovim, create the configuration folder:
-```bash
-mkdir ~/.config/nvim
-```
+| Action | Keybinding | Description |
+| :--- | :--- | :--- |
+| **Pull** | `p` | Fetch and pull changes from the remote branch. |
+| **Push** | `P` | Push current commits to the remote branch. |
+| **Force Push** | `F` | Safe force push (`--force-with-lease`). |
 
-**For an Existing Setup:**
-If you have configured Neovim already, create a backup folder:
-```bash
-mv ~/.config/nvim ~/.config/nvim.bak
-mkdir ~/.config/nvim
-```
-
-#### 2. Clone the Repository
-Clone the Mzansi Vim configuration into your config folder:
-
-```bash
-cd ~/.config/nvim
-git clone https://git.mzansi-innovation-hub.co.za/yaso_meth/mzansi_vim.git .
-```
-
-#### 3. Initialize
-Simply launch Neovim:
-
-```bash
-nvim
-```
 
 ## Additional information
 

@@ -39,6 +39,7 @@ return {
 						end
 					},
 					{ icon = "󱗘 ", desc = " Harpoon Search   ", key = "fl", action = "Telescope harpoon marks" },
+					{ icon = " ", desc = " Lazy Git     ", key = "lg", action = "LazyGit" },
 					{ icon = "󰒲 ", desc = " Lazy Manager     ", key = "z", action = "Lazy" },
 					{ icon = "󰌵 ", desc = " Help Tags        ", key = "fh", action = "Telescope help_tags" },
 					{ icon = " ", desc = " Quit             ", key = "q", action = "qa" },
