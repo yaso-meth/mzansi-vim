@@ -16,6 +16,7 @@ To ensure all plugins (LSP, Tree-sitter, and Telescope) function correctly, plea
 * **Yazi** (Required for file expolorer)
 * **Node & NPM** (Required for various LSP servers like `html` and `eslint`)
 * **Go** (Required for certain internal tools)
+* **LazyGit** (Required for LazyGit)
 
 For the best results, we recommend you install and use the Ghostty terminal with the following configuration:
 
