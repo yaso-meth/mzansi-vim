@@ -3,6 +3,7 @@ return {
 	event = 'InsertEnter',
 	opts = {
 		fast_wrap = {},
+		map_cr = false,
 	},
 	config = function(_, opts)
 		-- Initialize autopairs with your choices
