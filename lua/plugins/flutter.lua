@@ -8,34 +8,13 @@ return {
 		},
 		config = function()
 			vim.opt.termguicolors = true
-			-- vim.env.FLUTTER_FORCE_COLOR = "1"
-			local project_root = vim.fn.getcwd()
-			local analysis_excluded_folders = {
-				project_root .. "/.dart_tool",
-				project_root .. "/build",
-				project_root .. "/ios/Pods",
-				project_root .. "/android/.gradle",
-			}
-			local flutter_bin = vim.fn.exepath("flutter")
-			if flutter_bin ~= "" then
-				local flutter_sdk = vim.fn.fnamemodify(vim.fn.resolve(flutter_bin), ":h:h")
-				table.insert(analysis_excluded_folders, flutter_sdk .. "/packages")
-				table.insert(analysis_excluded_folders, flutter_sdk .. "/.pub-cache")
-			end
-
-			-- Auto scroll & Color logs when new logs appear
 			vim.api.nvim_create_autocmd({ "TextChanged", "BufWinEnter" }, {
 				pattern = "*__FLUTTER_DEV_LOG__*",
 				callback = function()
 					local buf = vim.api.nvim_get_current_buf()
 
-					-- Auto-scroll logic
 					if vim.bo[buf].filetype == "log" or vim.fn.bufname(buf):match("flutter%-dev%.log") then
-						local win = vim.api.nvim_get_current_win()
-						local last_line = vim.api.nvim_buf_line_count(buf)
-						if vim.api.nvim_get_mode().mode ~= 'i' then
-							vim.api.nvim_win_set_cursor(win, { last_line, 0 })
-						end
+						vim.cmd("normal! G")
 					end
 				end,
 			})
@@ -55,16 +34,22 @@ return {
 					capabilities = require("cmp_nvim_lsp").default_capabilities(),
 					on_attach = function(client, bufnr)
 						client.server_capabilities.semanticTokensProvider = nil
+						client.server_capabilities.documentOnTypeFormattingProvider = nil
+						-- client.server_capabilities.diagnosticProvider = nil
 					end,
+					flags = {
+						debounce_text_changes = 150, -- milliseconds
+					},
 					settings = {
 						showTodos = true,
 						completeFunctionCalls = false,
+						renameFilesWithClasses = "prompt",
+						enableSnippets = true,
 						updateImportsOnRename = true,
-						analysisExcludedFolders = analysis_excluded_folders,
 					},
 				},
 				widget_guides = {
-					enabled = false,
+					enabled = true,
 				},
 				closing_tags = {
 					enabled = false,
