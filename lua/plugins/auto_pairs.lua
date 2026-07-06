@@ -1,23 +1,19 @@
 return {
-	{
-		'windwp/nvim-autopairs',
-		event = "InsertEnter",
-		config = function()
-			local autopairs = require("nvim-autopairs")
-			autopairs.setup({
-				check_ts = false,
-				map_cr = false,
-				ts_config = {
-					lua = { "string" },
-					dart = { "string_literal" }
-				}
-			})
-			local cmp_autopairs = require("nvim-autopairs.completion.cmp")
-			local pcall_cmp, cmp = pcall(require, "cmp")
-			if pcall_cmp then
-				cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
-			end
-		end
+	'windwp/nvim-autopairs',
+	event = 'InsertEnter',
+	opts = {
+		fast_wrap = {},
+		map_cr = false,
 	},
+	config = function(_, opts)
+		-- Initialize autopairs with your choices
+		require('nvim-autopairs').setup(opts)
 
+		-- Safely hook into cmp if it's already available
+		local cmp_status, cmp = pcall(require, 'cmp')
+		if cmp_status then
+			local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+			cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
+		end
+	end,
 }

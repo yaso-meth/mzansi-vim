@@ -1,6 +1,6 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
-	lazy = false, -- Treesitter must not be lazy-loaded in the new version
+	lazy = false,
 	build = ":TSUpdate",
 	config = function()
 		local ts = require("nvim-treesitter")
@@ -9,28 +9,26 @@ return {
 			"dockerfile", "yaml", "bash", "json", "html",
 			"css", "javascript", "sql", "markdown", "markdown_inline",
 		}
-		-- 1. Global Settings
 		ts.setup({
 			install_dir = vim.fn.stdpath("data") .. "/site",
-			auto_install = true,
-			highlight = {
-				enable = true,
-			},
-			indent = {
-				enable = true,
-				disable = { "dart" },
-			},
 		})
-		-- 2. Bulk Install Parsers (Asynchronous)
-		ts.install(supported_languages)
-		-- 3. Enable Highlighting	
+		local already_installed = require("nvim-treesitter.config").get_installed()
+		local parsers_to_install = {}
+
+		for _, lang in ipairs(supported_languages) do
+			if not vim.tbl_contains(already_installed, lang) then
+				table.insert(parsers_to_install, lang)
+			end
+		end
+
+		if #parsers_to_install > 0 then
+			ts.install(parsers_to_install)
+		end
+
 		vim.api.nvim_create_autocmd("FileType", {
 			pattern = supported_languages,
 			callback = function()
-				local lang = vim.treesitter.language.get_lang(vim.bo.filetype)
-				if lang then
-					vim.treesitter.start()
-				end
+				vim.treesitter.start()
 			end,
 		})
 	end,
