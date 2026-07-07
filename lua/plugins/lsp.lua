@@ -88,7 +88,7 @@ return {
 					vim.api.nvim_create_autocmd("BufWritePre", {
 						buffer = ev.buf,
 						callback = function()
-							vim.lsp.buf.format({ async = false })
+							vim.lsp.buf.format({ bufnr = ev.buf, async = false })
 						end,
 					})
 				end,

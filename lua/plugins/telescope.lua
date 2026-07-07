@@ -12,8 +12,21 @@ return {
 
 		telescope.setup({
 			defaults = {
-				-- The "vimgrep_arguments" here are what make Telescope lag-free
-				-- when working with large generated codebases.
+				file_ignore_patterns = {
+					"%.dart_tool/",
+					"%.flatpak%-builder/",
+					"%.idea/",
+					"%.git/",
+					"build/",
+					"build%-dir/",
+					"android/",
+					"ios/",
+					"linux/",
+					"macos/",
+					"windows/",
+					"web/",
+					"%.g%.dart$", -- Catches generated files in find_files too
+				},
 				vimgrep_arguments = {
 					"rg",
 					"--color=never",

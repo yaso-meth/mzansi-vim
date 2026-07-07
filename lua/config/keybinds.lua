@@ -7,6 +7,8 @@ vim.keymap.set("v", "<leader>y", '"+y', { desc = "Copy to system clipboard" })
 vim.keymap.set({ "n", "v" }, "<leader>p", '"+p', { desc = "Paste from system clipboard after" })
 -- Paste from system clipboard BEFORE the cursor (Normal & Visual mode)
 vim.keymap.set({ "n", "v" }, "<leader>P", '"+P', { desc = "Paste from system clipboard before" })
+-- Native LSP restart keymap (No plugins or custom functions required!)
+vim.keymap.set("n", "<leader>lx", "<cmd>lsp restart<CR>", { desc = "Restart LSP Server" })
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "netrw",
 	callback = function(event)
