@@ -5,15 +5,15 @@ return {
 		cmdline = {
 			view = "cmdline_popup", -- This ensures it's a popup and not at the bottom
 		},
-		routes = {
-			{
-				filter = {
-					event = "lsp",
-					kind = "progress",
-				},
-				opts = { skip = true },
-			},
-		},
+		-- routes = {
+		-- 	{
+		-- 		filter = {
+		-- 			event = "lsp",
+		-- 			kind = "progress",
+		-- 		},
+		-- 		opts = { skip = true },
+		-- 	},
+		-- },
 		presets = {
 			bottom_search = false, -- use a classic bottom cmdline for search
 			command_palette = true, -- position the cmdline and popupmenu together

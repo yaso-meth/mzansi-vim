@@ -150,6 +150,16 @@ The **Leader Key** is set to `Space`.
 | **Harpoon Find** | `<leader>fl` | Use Telescope to search your Harpoon list. |
 | **Quick Nav** | `Ctrl + h/t/n/s` | Jump instantly to Harpoon files 1, 2, 3, or 4. |
 
+### Telescope Navigation & Buffer Management
+
+| Action | Keybinding | Description |
+| :--- | :--- | :--- |
+| **Find Files** | `<leader>ff` | Fuzzy find files in your project.[cite: 3] |
+| **Live Grep** | `<leader>fg` | Search for specific text across all project files.[cite: 3] |
+| **Help Tags** | `<leader>fh` | Search through Neovim help documentation.[cite: 3] |
+| **Active Buffers List** | `<leader>fb` | View, search, and switch between your currently open buffers.[cite: 3] |
+| **Delete Buffer (Normal Mode)** | `d` | Close the selected buffer after pressing `<Esc>` inside the `<leader>fb` menu. |
+
 ### LSP & Development
 | Action | Keybinding | Description |
 | :--- | :--- | :--- |
@@ -172,6 +182,7 @@ The **Leader Key** is set to `Space`.
 | **List Devices** | `:FDevices` | Show a list of available physical/virtual devices. |
 | **Toggle Logs** | `:FLogs` | Open or close the Flutter Dev Log split. |
 | **Clear Logs** | `:FLogsClear` | Clear the current Flutter Dev Log buffer. |
+| **Restart LSP** | `:FLspRestart` | Restart the Dart lsp is not working correctly. |
 | **Clean Project** | `:FClean` | Execute flutter clean in split terminal. |
 | **Pub Get** | `:FPubGet` | Fetches project dependencies. |
 | **Start DevTools** | `:FDevToolsStart` | Start the local Flutter DevTools server |
