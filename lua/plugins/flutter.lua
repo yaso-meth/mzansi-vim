@@ -105,7 +105,7 @@ return {
 					enabled = true,
 				},
 				closing_tags = {
-					enabled = false,
+					enabled = true,
 				},
 				dev_log = {
 					enabled = true,
