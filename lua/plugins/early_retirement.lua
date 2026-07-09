@@ -4,13 +4,13 @@ return {
 	opts = {
 		ignoreFilenamePattern = "FLUTTER_DEV_LOG",
 		ignoredFiletypes = { "log" },
-		retirementAgeMins = 10,
+		retirementAgeMins = 15,
 		minimumBufferNum = 5,
 		ignoreUnsavedChangesBufs = true,
 		ignoreVisibleBufs = true,
 		ignoreSpecialBuftypes = true,
 		ignoreAltFile = true,
-		notificationOnAutoClose = true,
+		notificationOnAutoClose = false,
 		deleteBufferWhenFileDeleted = false,
 	},
 }
