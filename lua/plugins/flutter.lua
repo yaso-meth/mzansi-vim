@@ -119,7 +119,7 @@ return {
 			local user_command = vim.api.nvim_create_user_command
 
 			local function run_flutter_with_mode(extra_args)
-				extra_args = extra_args or ""
+				extra_args = extra_args or "--target=lib/main.dart"
 
 				-- 1. Get devices asynchronously so we never block the UI thread
 				--    (blocking here is what causes queued terminal input to get
