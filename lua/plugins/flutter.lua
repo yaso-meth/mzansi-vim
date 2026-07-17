@@ -224,6 +224,8 @@ return {
 			user_command("FBuild", "split | term dart run build_runner build", {})
 			user_command("FWatch", "split | term dart run build_runner watch", {})
 			user_command("FClean", "split | term flutter clean", {})
+			vim.keymap.set("n", "<leader>ll", "<cmd>FlutterLogToggle<CR>",
+				{ desc = "Toggle Flutter Logs", silent = true })
 		end,
 	},
 }

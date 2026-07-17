@@ -181,6 +181,7 @@ The **Leader Key** is set to `Space`.
 | **List Emulators** | `:FEmulators` | Show and launch available emulators. |
 | **List Devices** | `:FDevices` | Show a list of available physical/virtual devices. |
 | **Toggle Logs** | `:FLogs` | Open or close the Flutter Dev Log split. |
+| **Toggle Logs** | `<leader>ll` | Open or close the Flutter Dev Log split. |
 | **Clear Logs** | `:FLogsClear` | Clear the current Flutter Dev Log buffer. |
 | **Restart LSP** | `:FLspRestart` | Restart the Dart lsp is not working correctly. |
 | **Clean Project** | `:FClean` | Execute flutter clean in split terminal. |
