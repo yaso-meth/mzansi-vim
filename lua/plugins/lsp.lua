@@ -42,6 +42,7 @@ return {
 				"eslint",
 				"sqls",
 				"marksman",
+				"qmlls",
 			}
 
 			mason_lspconfig.setup({
